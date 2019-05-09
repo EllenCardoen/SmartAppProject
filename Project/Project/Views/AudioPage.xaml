@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.AudioPage"
+             Title="{Binding Name}"
+             BackgroundColor="Black">
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Label />
+            <Label />
+            <Image Source="{Binding Image}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="350" HeightRequest="150"/>
+            <Label />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="ADD" BackgroundColor="Black" TextColor="White" Command="{Binding addTrack}" />
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
+                    <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                    <Label Text="{Binding ArtistName}" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                </StackLayout>
+                <Button Text="SHARE" BackgroundColor="Black" TextColor="White" Command="{Binding shareTrack}" HorizontalOptions="EndAndExpand" HeightRequest="30" />
+            </StackLayout>
+
+
+            <WebView Source="{Binding Audio}"  HorizontalOptions="Fill" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" />
+            <!--<Button Command="{Binding startTrack}" Image="play3.png" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" HeightRequest="100" />-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

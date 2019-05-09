@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.MySongPlaylistPage"
+             Title="My Songs">
+    <ContentPage.Content>
+
+        <StackLayout Padding="13" >
+
+            <Label />
+
+            <Frame  Padding="0" CornerRadius="30" WidthRequest="350" BorderColor="Gray" HorizontalOptions="Center" >
+                <SearchBar SearchCommand="{Binding SearchCommand}" Text="{Binding SearchBar}" Placeholder="Search" Margin="10,0,0,0" />
+                <!--<SearchBar Text="{Binding SearchBar}" Margin="10,0,0,0" Placeholder="Search" />-->
+            </Frame>
+            
+            <Label Text="{Binding ErrorMessage}" HorizontalOptions="Center" />
+
+            <Label Text="PLAYLIST" FontAttributes="Bold" FontSize="Medium" />
+
+            <Label />
+
+            <ListView ItemsSource="{Binding Tracks}" SelectedItem="{Binding SelectedTrack}" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="musicLogo.png" />
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                                    <Label Text="{Binding name}" FontAttributes="Bold" VerticalOptions="Center" />
+                                    <Label Text="{Binding artist_name}" VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

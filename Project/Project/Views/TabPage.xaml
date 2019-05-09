@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mypages="clr-namespace:Project.Views;assembly=Project"
+             x:Class="Project.Views.TabPage" BarBackgroundColor="#000000" Title="MusicLibrary" BarTextColor="White">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Icon="SearchIcon.png" Text="Explore on Jamendo!" Priority="0" Command="{Binding exploreOnJamendo}" CommandParameter="1" />
+    </TabbedPage.ToolbarItems>
+
+    <TabbedPage.Children>
+        <mypages:TrackPage Title="Tracks"/>
+        <mypages:PlaylistPage Title="Playlists" />
+        <mypages:AlbumPage Title="Albums" />
+        <mypages:ArtistPage Title="Artists" />
+    </TabbedPage.Children>
+    
+</TabbedPage>

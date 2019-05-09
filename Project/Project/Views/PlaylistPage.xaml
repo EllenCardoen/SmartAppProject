@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.PlaylistPage">
+    <ContentPage.Content>
+
+        <StackLayout Margin="8,80,100,8">
+
+            <Button Text="My Songs" Command="{Binding playlistMySongs}" BackgroundColor="Transparent" HorizontalOptions="Start"  />
+            <Button Text="My Albums" Command="{Binding playlistMyAlbums}" BackgroundColor="Transparent" HorizontalOptions="Start"  />
+            <Button Text="My Artists" Command="{Binding playslistMyArtists}" BackgroundColor="Transparent" HorizontalOptions="Start" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

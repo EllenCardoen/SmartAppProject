@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Project"
+             x:Class="Project.Views.MainPage" >
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+
+
+            
+        <Label Text="To get your Client_Id," HorizontalOptions="Center" />
+
+        <Label Text="please register an account on jamendo" HorizontalOptions="Center" />
+
+        <Label />
+
+
+
+        <Frame  Padding="0" CornerRadius="30" BackgroundColor="White" BorderColor="Gray" WidthRequest="300" HorizontalOptions="Center" >
+
+            <Entry Text="{Binding IdEntry}" Placeholder="Client_ID" HorizontalOptions="Center" />
+
+        </Frame>
+
+        <Label />
+
+        <Frame  Padding="0" CornerRadius="30" BackgroundColor="Black" WidthRequest="120" HorizontalOptions="Center" >
+            
+            <Button x:Name="btn1" HorizontalOptions="Center" WidthRequest="90" Text="Begin" TextColor="White" BackgroundColor="Black" Command="{Binding startApp}" />
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

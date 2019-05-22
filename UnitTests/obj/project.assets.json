@@ -2067,7 +2067,22 @@
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
-          "build/_._": {}
+          "build/Xamarin.Forms.props": {},
+          "build/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.Forms.Mocks/3.5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.5.0.129452"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll": {}
         }
       },
       "Project/1.0.0": {
@@ -7159,6 +7174,18 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.Mocks/3.5.0.1": {
+      "sha512": "3eqMkmvXAreikK+QNgc5EHopmJRx3Pi2Y5JO2E2HMv/lwh21WFMdxiZcFHw2HvhdHKyIyJ8dRkkUeg0jmQ+REw==",
+      "type": "package",
+      "path": "xamarin.forms.mocks/3.5.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll",
+        "xamarin.forms.mocks.3.5.0.1.nupkg.sha512",
+        "xamarin.forms.mocks.nuspec"
+      ]
+    },
     "Project/1.0.0": {
       "type": "project",
       "path": "../Project/Project/Project.csproj",
@@ -7174,7 +7201,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Moq >= 4.10.1",
       "Project >= 1.0.0",
-      "Xamarin.Essentials >= 1.1.0"
+      "Xamarin.Essentials >= 1.1.0",
+      "Xamarin.Forms.Mocks >= 3.5.0.1"
     ]
   },
   "packageFolders": {
@@ -7250,6 +7278,10 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Xamarin.Forms.Mocks": {
+            "target": "Package",
+            "version": "[3.5.0.1, )"
           }
         },
         "imports": [

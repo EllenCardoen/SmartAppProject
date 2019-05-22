@@ -29,7 +29,6 @@ namespace Project.ViewModels
             
 
             SimpleIoc.Default.Register<IProjectAppService, ProjectAppService>();
-            SimpleIoc.Default.Register<ImplementationEssentials>();
 
 
             SimpleIoc.Default.Register<MainPageViewModel>();

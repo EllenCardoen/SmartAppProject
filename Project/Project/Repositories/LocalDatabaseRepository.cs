@@ -30,6 +30,15 @@ namespace Project.Repositories
             Setup();
         }
 
+        public void updateDatabase()
+        {
+            using (var db = new DatabaseContext(Path))
+            {
+                db.UpdateRange();
+                db.SaveChanges();
+            }
+        }
+
         public void AddTrackMySongs(DatabaseIdContent id)
         {
             using (var db = new DatabaseContext(Path))

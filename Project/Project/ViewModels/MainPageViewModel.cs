@@ -15,7 +15,6 @@ namespace Project.ViewModels
     {
         private ICustomNavigation _navigationService;
         private IClientIdSettingsRepository _settingRepository;
-        private IProjectAppService _projectAppService;
 
         public MainPageViewModel(ICustomNavigation navigationService, IClientIdSettingsRepository settingRepository)
         {

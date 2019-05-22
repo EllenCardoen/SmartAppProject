@@ -18,11 +18,9 @@ namespace Project.Services
         Task<List<Track>> GetTracksMySongs();
         void OpenBrowser(Uri uri);
         void SaveClientId();
-        Task<List<Album>> SearchAlbum(string searchRequest);
-        Task<Album> SearchAlbumById(DatabaseIdContent id);
-        Task<Artist> SearchArtistById(DatabaseIdContent id);
         Task<List<Track>> SearchTrack(string searchRequest);
         Task<Track> SearchTrackById(DatabaseIdContent id);
         void ShareContent(string url);
+        void UpdateDatabase();
     }
 }

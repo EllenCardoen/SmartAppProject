@@ -219,6 +219,7 @@ namespace Project.ViewModels
                         DatabaseIdContent idForDatabase = new DatabaseIdContent();
                         idForDatabase.id = Id;
                         _projectAppService.AddTrackMySongs(idForDatabase);
+                        _projectAppService.UpdateDatabase();
                         ErrorMessageAddRemoveTrack = "Added!";
                     }
                     catch(Exception ex)
@@ -242,6 +243,7 @@ namespace Project.ViewModels
                         DatabaseIdContent idForDatabase = new DatabaseIdContent();
                         idForDatabase.id = Id;
                         _projectAppService.DeleteTrack(idForDatabase);
+                        _projectAppService.UpdateDatabase();
                         ErrorMessageAddRemoveTrack = "Deleted!";
                     }
                     catch (Exception ex)

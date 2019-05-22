@@ -53,32 +53,9 @@ namespace Project.Services
             return await _searchRepository.SearchTrackById(ClientId, id);
         }
 
-        public async Task<Album> SearchAlbumById(DatabaseIdContent id)
-        {
-            return await _searchRepository.SearchAlbumById(ClientId, id);
-        }
-
-        public async Task<Artist> SearchArtistById(DatabaseIdContent id)
-        {
-            return await _searchRepository.SearchArtistById(ClientId, id);
-        }
-
-
-
-        //public async Task<List<News>> GetNews()
-        //{
-        //    return await _searchRepository.GetNews(ClientId);
-
-        //}
-
         public async Task<List<AlbumNews>> GetAlbums()
         {
             return await _searchRepository.GetAlbum(ClientId);
-        }
-
-        public async Task<List<Album>> SearchAlbum(string searchRequest)
-        {
-            return await _searchRepository.SearchAlbum(ClientId, searchRequest);
         }
 
         public async Task<List<ArtistNews>> GetArtists()
@@ -100,6 +77,11 @@ namespace Project.Services
         }
 
         //van LocalDatabaseRepository:
+
+        public void UpdateDatabase()
+        {
+            _databaseRepository.updateDatabase();
+        }
 
         public void AddTrackMySongs(DatabaseIdContent id)
         {

@@ -9,5 +9,6 @@ namespace Project.Repositories
         void deleteTrack(DatabaseIdContent id);
         List<DatabaseIdContent> GetTracksMySongs();
         void Setup();
+        void updateDatabase();
     }
 }

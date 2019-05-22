@@ -7,8 +7,6 @@
         <StackLayout Margin="8,80,100,8">
 
             <Button Text="My Songs" Command="{Binding playlistMySongs}" BackgroundColor="Transparent" HorizontalOptions="Start"  />
-            <Button Text="My Albums" Command="{Binding playlistMyAlbums}" BackgroundColor="Transparent" HorizontalOptions="Start"  />
-            <Button Text="My Artists" Command="{Binding playslistMyArtists}" BackgroundColor="Transparent" HorizontalOptions="Start" />
 
         </StackLayout>
 

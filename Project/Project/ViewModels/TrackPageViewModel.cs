@@ -91,9 +91,6 @@ namespace Project.ViewModels
             }
         }
 
-
-
-
         private Track _selectedTrack;
         public Track SelectedTrack
         {
@@ -104,18 +101,17 @@ namespace Project.ViewModels
             set
             {
                 _selectedTrack = value;
-                
                 RaisePropertyChanged(() => SelectedTrack);
+
                 if (SelectedTrack != null)
                 {
                     Track Track = _selectedTrack;
                     _navigationService.NavigateTo(Locator.AudioPage, Track);
+
                 }
             }
         }
 
-
-        
         public RelayCommand SearchCommand
         {
             get
@@ -136,6 +132,7 @@ namespace Project.ViewModels
                     try
                     {
                         _projectAppService.AddTrackMySongs(id);
+                        _projectAppService.UpdateDatabase();
                     }
                     catch (Exception ex)
                     {

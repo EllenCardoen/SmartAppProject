@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "ce9fc1f55044f451922c55c669572d1e4d5ded82"
+    "signature": "2046af7747b5201f914309273437235014c60872"
   },
   "compilationOptions": {},
   "targets": {
@@ -14,7 +14,8 @@
           "Microsoft.NET.Test.Sdk": "15.8.0",
           "Moq": "4.10.1",
           "Project": "1.0.0",
-          "Xamarin.Essentials": "1.1.0"
+          "Xamarin.Essentials": "1.1.0",
+          "Xamarin.Forms.Mocks": "3.5.0.1"
         },
         "runtime": {
           "UnitTests.dll": {}
@@ -1427,6 +1428,21 @@
           }
         }
       },
+      "Xamarin.Forms.Mocks/3.5.0.1": {
+        "dependencies": {
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.UnitTests.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.UnitTests.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Project/1.0.0": {
         "dependencies": {
           "Flurl.Http": "2.4.2",
@@ -2219,6 +2235,13 @@
       "sha512": "sha512-YTPYiRg5q8Q1AgkjX9mx2/0wfCNyoSfztvvWw9HY4qM1lmOgkAxAbbtY8zi3fCPUXhfZrCAgRvJYNS8VM519kQ==",
       "path": "xamarin.forms/3.6.0.344457",
       "hashPath": "xamarin.forms.3.6.0.344457.nupkg.sha512"
+    },
+    "Xamarin.Forms.Mocks/3.5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3eqMkmvXAreikK+QNgc5EHopmJRx3Pi2Y5JO2E2HMv/lwh21WFMdxiZcFHw2HvhdHKyIyJ8dRkkUeg0jmQ+REw==",
+      "path": "xamarin.forms.mocks/3.5.0.1",
+      "hashPath": "xamarin.forms.mocks.3.5.0.1.nupkg.sha512"
     },
     "Project/1.0.0": {
       "type": "project",

@@ -12,10 +12,12 @@ namespace Project.ViewModels
     public class PlaylistPageViewModel : ViewModelBase
     {
         private ICustomNavigation _navigationService;
+        private IProjectAppService _projectAppService;
 
-        public PlaylistPageViewModel(ICustomNavigation navigationService)
+        public PlaylistPageViewModel(ICustomNavigation navigationService, IProjectAppService projectAppService)
         {
             _navigationService = navigationService;
+            _projectAppService = projectAppService;
         }
 
 
@@ -25,6 +27,7 @@ namespace Project.ViewModels
             {
                 return new RelayCommand(() =>
                 {
+                    _projectAppService.UpdateDatabase();
                     _navigationService.NavigateTo(Locator.MySongPlaylistPage);
                 });
             }

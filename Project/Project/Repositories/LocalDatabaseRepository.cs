@@ -39,24 +39,6 @@ namespace Project.Repositories
             }
         }
 
-        public void AddTrackMyAlbums(DatabaseIdContent id)
-        {
-            using (var db = new DatabaseContext(Path))
-            {
-                db.MyAlbums.Add(id);
-                db.SaveChanges();
-            }
-        }
-
-        public void AddTrackMyArtists(DatabaseIdContent id)
-        {
-            using (var db = new DatabaseContext(Path))
-            {
-                db.MyArtists.Add(id);
-                db.SaveChanges();
-            }
-        }
-
         public List<DatabaseIdContent> GetTracksMySongs()
         {
             using (var db = new DatabaseContext(Path))
@@ -65,19 +47,12 @@ namespace Project.Repositories
             }
         }
 
-        public List<DatabaseIdContent> GetTracksMyAlbums()
+        public void deleteTrack(DatabaseIdContent id)
         {
             using (var db = new DatabaseContext(Path))
             {
-                return db.MyAlbums.ToList();
-            }
-        }
-
-        public List<DatabaseIdContent> GetTracksMyArtists()
-        {
-            using (var db = new DatabaseContext(Path))
-            {
-                return db.MyArtists.ToList();
+                db.MySongs.Remove(id);
+                db.SaveChanges();
             }
         }
     }

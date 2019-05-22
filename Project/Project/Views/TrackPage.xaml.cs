@@ -20,9 +20,6 @@ namespace Project.Views
             BindingContext = App.Locator.TrackPageViewModel;
 
             NavigationPage.SetHasNavigationBar(this, false);
-
-            //var image = new Image();
-            //image.GestureRecognizers.Add(new TapGestureRecognizer(OnTap));
         }
     }
 }

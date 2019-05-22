@@ -35,6 +35,7 @@ C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\res\
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\res\drawable\hearticon.png
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\res\drawable\plusicon.png
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\res\drawable\check.jpg
+C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\res\drawable\headersmartapp.jpg
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\R.txt
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -129,9 +130,7 @@ C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\andr
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\SmartApp\SmartAppProject\Project\Project\bin\Debug\netstandard2.0\Project.dll
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\linksrc\Project.Android.pdb
-C:\SmartApp\SmartAppProject\Project\Project.Android\bin\Debug\Project.dll.mdb
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\linksrc\GalaSoft.MvvmLight.Platform.dll.mdb
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\linksrc\InTheHand.Forms.dll.mdb
 C:\SmartApp\SmartAppProject\Project\Project.Android\obj\Debug\MonoAndroid81\linksrc\InTheHand.Forms.Platform.Android.dll.mdb

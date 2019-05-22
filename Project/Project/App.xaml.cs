@@ -33,12 +33,10 @@ namespace Project
             nav.Configure(Locator.MainPage, typeof(MainPage));
             nav.Configure(Locator.MasterPage, typeof(MasterPage));
             nav.Configure(Locator.TabPage, typeof(TabPage));
-            nav.Configure(Locator.OverviewPage, typeof(OverviewPage));
             nav.Configure(Locator.TrackPage, typeof(TrackPage));
             nav.Configure(Locator.AlbumPage, typeof(AlbumPage));
             nav.Configure(Locator.AudioPage, typeof(AudioPage));
             nav.Configure(Locator.PlaylistPage, typeof(PlaylistPage));
-            nav.Configure(Locator.PlaylistTrackPage, typeof(PlaylistTrackPage));
             nav.Configure(Locator.MySongPlaylistPage, typeof(MySongPlaylistPage));
             nav.Configure(Locator.ArtistPage, typeof(ArtistPage));
 

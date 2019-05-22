@@ -19,6 +19,5 @@ namespace Project.Models
         public object[] subtitle { get; set; }
         public string target { get; set; }
         public Images images { get; set; }
-
     }
 }

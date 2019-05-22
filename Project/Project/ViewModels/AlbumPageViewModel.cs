@@ -28,7 +28,7 @@ namespace Project.ViewModels
             {
                 Albums = await _projectAppService.GetAlbums();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -36,10 +36,28 @@ namespace Project.ViewModels
 
         //public async Task LoadSearchData()
         //{
+        //    AlbumNews albumNews = new AlbumNews();
+        //    Lang AlbumName = new Lang();
+        //    Images Images = new Images();
+
         //    Task<List<Album>> T = _projectAppService.SearchAlbum(SearchBar);
         //    await T.ContinueWith(t =>
         //    {
-        //        Albums = T.Result;
+        //        foreach (Album album in T.Result)
+        //        {
+        //            album.image = Images.size315_111;
+
+        //            albumNews.images = album.image;
+        //            albumNews.title = album.name;
+
+        //            var track = await SearchTrackById(id);
+        //            tracks.Add(track);
+        //        }
+        //        return tracks;
+
+
+        //        SearchAlbum = T.Result;
+        //        T.
         //        if (Albums.Count == 0)
         //        {
         //            ErrorMessage = "No results were found.";
@@ -51,33 +69,33 @@ namespace Project.ViewModels
         //    });
         //}
 
-        private string _errorMessage;
-        public string ErrorMessage
-        {
-            get
-            {
-                return _errorMessage;
-            }
-            set
-            {
-                _errorMessage = value;
-                RaisePropertyChanged(() => ErrorMessage);
-            }
-        }
+        //private string _errorMessage;
+        //public string ErrorMessage
+        //{
+        //    get
+        //    {
+        //        return _errorMessage;
+        //    }
+        //    set
+        //    {
+        //        _errorMessage = value;
+        //        RaisePropertyChanged(() => ErrorMessage);
+        //    }
+        //}
 
-        private string _searchBar;
-        public string SearchBar
-        {
-            get
-            {
-                return _searchBar;
-            }
-            set
-            {
-                _searchBar = value;
-                RaisePropertyChanged(() => SearchBar);
-            }
-        }
+        //private string _searchBar;
+        //public string SearchBar
+        //{
+        //    get
+        //    {
+        //        return _searchBar;
+        //    }
+        //    set
+        //    {
+        //        _searchBar = value;
+        //        RaisePropertyChanged(() => SearchBar);
+        //    }
+        //}
 
         private List<AlbumNews> _albums;
         public List<AlbumNews> Albums
@@ -93,8 +111,8 @@ namespace Project.ViewModels
             }
         }
 
-        private Album _selectedAlbum;
-        public Album SelectedAlbum
+        private AlbumNews _selectedAlbum;
+        public AlbumNews SelectedAlbum
         {
             get
             {
@@ -106,13 +124,13 @@ namespace Project.ViewModels
                 RaisePropertyChanged(() => SelectedAlbum);
                 if (SelectedAlbum != null)
                 {
-                    Album Album = _selectedAlbum;
-                    _navigationService.NavigateTo(Locator.AudioPage, Album);
+                    var uri = _selectedAlbum.link;
+                    Uri urlAlbum = new Uri(uri);
+
+                    _projectAppService.OpenBrowser(urlAlbum);
                 }
             }
         }
-
-
 
         //public RelayCommand SearchCommand
         //{

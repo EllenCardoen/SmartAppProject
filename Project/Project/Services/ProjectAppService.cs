@@ -53,11 +53,23 @@ namespace Project.Services
             return await _searchRepository.SearchTrackById(ClientId, id);
         }
 
-        public async Task<List<News>> GetNews()
+        public async Task<Album> SearchAlbumById(DatabaseIdContent id)
         {
-            return await _searchRepository.GetNews(ClientId);
-
+            return await _searchRepository.SearchAlbumById(ClientId, id);
         }
+
+        public async Task<Artist> SearchArtistById(DatabaseIdContent id)
+        {
+            return await _searchRepository.SearchArtistById(ClientId, id);
+        }
+
+
+
+        //public async Task<List<News>> GetNews()
+        //{
+        //    return await _searchRepository.GetNews(ClientId);
+
+        //}
 
         public async Task<List<AlbumNews>> GetAlbums()
         {
@@ -94,16 +106,6 @@ namespace Project.Services
             _databaseRepository.AddTrackMySongs(id);
         }
 
-        public void AddTrackMyAlbums(DatabaseIdContent id)
-        {
-            _databaseRepository.AddTrackMyAlbums(id);
-        }
-
-        public void AddTrackMyArtists(DatabaseIdContent id)
-        {
-            _databaseRepository.AddTrackMyArtists(id);
-        }
-
         public async Task<List<Track>> GetTracksMySongs()
         {
             List<Track> tracks = new List<Track>();
@@ -115,28 +117,9 @@ namespace Project.Services
             return tracks;
         }
 
-        public async Task<List<Track>> GetTracksMyAlbums()
+        public void DeleteTrack(DatabaseIdContent id)
         {
-            List<Track> tracks = new List<Track>();
-            foreach (DatabaseIdContent id in _databaseRepository.GetTracksMyAlbums())
-            {
-                //MOET NOG VERANDEREN NAAR SEARCHALBUMBYID
-                var track = await SearchTrackById(id);
-                tracks.Add(track);
-            }
-            return tracks;
-        }
-
-        public async Task<List<Track>> GetTracksMyArtists()
-        {
-            List<Track> tracks = new List<Track>();
-            foreach (DatabaseIdContent id in _databaseRepository.GetTracksMyArtists())
-            {
-                //MOET NOG VERANDEREN NAAR SEARCHARTISTMYBID
-                var track = await SearchTrackById(id);
-                tracks.Add(track);
-            }
-            return tracks;
+            _databaseRepository.deleteTrack(id);
         }
 
         //van BrowserRepository:

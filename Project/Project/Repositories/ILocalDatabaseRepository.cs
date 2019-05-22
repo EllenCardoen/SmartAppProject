@@ -5,11 +5,8 @@ namespace Project.Repositories
 {
     public interface ILocalDatabaseRepository
     {
-        void AddTrackMyAlbums(DatabaseIdContent id);
-        void AddTrackMyArtists(DatabaseIdContent id);
         void AddTrackMySongs(DatabaseIdContent id);
-        List<DatabaseIdContent> GetTracksMyAlbums();
-        List<DatabaseIdContent> GetTracksMyArtists();
+        void deleteTrack(DatabaseIdContent id);
         List<DatabaseIdContent> GetTracksMySongs();
         void Setup();
     }

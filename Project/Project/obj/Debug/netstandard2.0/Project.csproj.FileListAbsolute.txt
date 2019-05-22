@@ -12,9 +12,7 @@ C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\Audio
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\MasterPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\MySongPlaylistPage.xaml.g.cs
-C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\OverviewPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\PlaylistPage.xaml.g.cs
-C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\PlaylistTrackPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\TabPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Views\TrackPage.xaml.g.cs
 C:\SmartApp\SmartAppProject\Project\Project\obj\Debug\netstandard2.0\Project.csproj.CoreCompileInputs.cache

@@ -18,7 +18,7 @@ namespace Project.Repositories
         {
             try
             {
-                var getResponse = await $"https://api.jamendo.com/v3.0/tracks/?client_id={clientId}&limit=20".GetJsonAsync<JObject>();
+                var getResponse = await $"https://api.jamendo.com/v3.0/tracks/?client_id={clientId}&limit=20&tags=pop".GetJsonAsync<JObject>();
                 return getResponse.SelectToken("results").ToObject<List<Track>>();
             }
             catch (FlurlHttpException ex)
@@ -65,6 +65,40 @@ namespace Project.Repositories
             }
         }
 
+        public async Task<Album> SearchAlbumById(string clientId, DatabaseIdContent id)
+        {
+            try
+            {
+                var getResponse = await $"https://api.jamendo.com/v3.0/albums/?client_id={clientId}&format=jsonpretty&id={id.id}".GetJsonAsync<JObject>();
+                return getResponse.SelectToken("results").First.ToObject<Album>();
+            }
+            catch(FlurlHttpException ex)
+            {
+                throw ex;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Artist> SearchArtistById(string clientId, DatabaseIdContent id)
+        {
+            try
+            {
+                var getResponse = await $"https://api.jamendo.com/v3.0/artists/?client_id={clientId}&format=jsonpretty&id={id.id}".GetJsonAsync<JObject>();
+                return getResponse.SelectToken("results").First.ToObject<Artist>();
+            }
+            catch (FlurlHttpException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         public async Task<List<Track>> GetAllPlaylistTracks(string clientId, string userName,string PlaylistName)
         {
@@ -83,22 +117,22 @@ namespace Project.Repositories
             }
         }
 
-        public async Task<List<News>> GetNews(string clientId)
-        {
-            try
-            {
-                var getResponse = await $"https://api.jamendo.com/v3.0/feeds/?client_id={clientId}&format=jsonpretty&limit=10&type=news".GetJsonAsync<JObject>();
-                return getResponse.SelectToken("results").ToObject<List<News>>();
-            }
-            catch(FlurlHttpException ex)
-            {
-                throw ex;
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public async Task<List<News>> GetNews(string clientId)
+        //{
+        //    try
+        //    {
+        //        var getResponse = await $"https://api.jamendo.com/v3.0/feeds/?client_id={clientId}&format=jsonpretty&limit=10&type=news".GetJsonAsync<JObject>();
+        //        return getResponse.SelectToken("results").ToObject<List<News>>();
+        //    }
+        //    catch(FlurlHttpException ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         public async Task<List<AlbumNews>> GetAlbum(string clientId)
         {

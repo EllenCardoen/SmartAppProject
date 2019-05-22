@@ -194,20 +194,65 @@ namespace Project.ViewModels
             }
         }
 
+        private string _errorMessageAddRemoveTrack;
+        public string ErrorMessageAddRemoveTrack
+        {
+            get
+            {
+                return _errorMessageAddRemoveTrack;
+            }
+            set
+            {
+                _errorMessageAddRemoveTrack = value;
+                RaisePropertyChanged(() => ErrorMessageAddRemoveTrack);
+            }
+        }
+
         public RelayCommand addTrack
         {
             get
             {
                 return new RelayCommand(() =>
                 {
-                    DatabaseIdContent idForDatabase = new DatabaseIdContent();
-                    idForDatabase.id = Id;
-                    _projectAppService.AddTrackMySongs(idForDatabase);
+                    try
+                    {
+                        DatabaseIdContent idForDatabase = new DatabaseIdContent();
+                        idForDatabase.id = Id;
+                        _projectAppService.AddTrackMySongs(idForDatabase);
+                        ErrorMessageAddRemoveTrack = "Added!";
+                    }
+                    catch(Exception ex)
+                    {
+                        ErrorMessageAddRemoveTrack = "Couldn't add track!";
+                        throw ex;
+                    }
+
                 });
             }
         }
 
-        
+        public RelayCommand deleteTrack
+        {
+            get
+            {
+                return new RelayCommand(() =>
+                {
+                    try
+                    {
+                        DatabaseIdContent idForDatabase = new DatabaseIdContent();
+                        idForDatabase.id = Id;
+                        _projectAppService.DeleteTrack(idForDatabase);
+                        ErrorMessageAddRemoveTrack = "Deleted!";
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorMessageAddRemoveTrack = "Couldn't remove track!";
+                        throw ex;
+                    }
+
+                });
+            }
+        }
 
     }
 }

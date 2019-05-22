@@ -17,7 +17,7 @@
 
             <Label Text="{Binding ErrorMessage}" HorizontalOptions="Center" />
 
-            <ListView ItemsSource="{Binding Tracks}" SelectedItem="{Binding SelectedTrack}" RowHeight="50">
+            <ListView x:Name="ListviewTracks" ItemsSource="{Binding Tracks}" SelectedItem="{Binding SelectedTrack}" RowHeight="50">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -27,8 +27,6 @@
                                     <Label Text="{Binding name}" FontAttributes="Bold" VerticalOptions="Center" />
                                     <Label Text="{Binding artist_name}" VerticalOptions="Center" />
                                 </StackLayout>
-                                <Button Text="ADD" Command="{Binding addToPlaylist}" CommandParameter="{Binding id}" HorizontalOptions="EndAndExpand" HeightRequest="30" />
-                                <!--<Image Source="heartIcon.png" HorizontalOptions="EndAndExpand" HeightRequest="30" Margin="0,20,0,0" />-->
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

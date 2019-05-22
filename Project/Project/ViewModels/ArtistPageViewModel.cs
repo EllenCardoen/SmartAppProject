@@ -38,5 +38,27 @@ namespace Project.ViewModels
                 RaisePropertyChanged(() => Artists);
             }
         }
+
+        private ArtistNews _selectedArtist;
+        public ArtistNews SelectedArtist
+        {
+            get
+            {
+                return _selectedArtist;
+            }
+            set
+            {
+                _selectedArtist = value;
+
+                RaisePropertyChanged(() => SelectedArtist);
+                if (SelectedArtist != null)
+                {
+                    var uri = _selectedArtist.link;
+                    Uri urlArtist = new Uri(uri);
+
+                    _projectAppService.OpenBrowser(urlArtist);
+                }
+            }
+        }
     }
 }

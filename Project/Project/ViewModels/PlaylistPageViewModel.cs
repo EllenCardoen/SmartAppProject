@@ -12,12 +12,10 @@ namespace Project.ViewModels
     public class PlaylistPageViewModel : ViewModelBase
     {
         private ICustomNavigation _navigationService;
-        private IProjectAppService _projectAppService;
 
-        public PlaylistPageViewModel(ICustomNavigation navigationService, IProjectAppService projectAppService)
+        public PlaylistPageViewModel(ICustomNavigation navigationService)
         {
             _navigationService = navigationService;
-            //LoadDataPlaylist().GetAwaiter();
         }
 
 
@@ -27,38 +25,9 @@ namespace Project.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    //PlaylistInfo info = new PlaylistInfo() { name = "MySongs" };
                     _navigationService.NavigateTo(Locator.MySongPlaylistPage);
                 });
             }
         }
-
-        public RelayCommand playlistMyAlbums
-        {
-            get
-            {
-                return new RelayCommand(() =>
-                {
-                    string page = "MyAlbums";
-                    _navigationService.NavigateTo(Locator.PlaylistTrackPage, page);
-                });
-            }
-        }
-
-        public RelayCommand playslistMyArtists
-        {
-            get
-            {
-                return new RelayCommand(() =>
-                {
-                    string page = "MyArtists";
-                    _navigationService.NavigateTo(Locator.PlaylistTrackPage, page);
-                });
-            }
-        }
-
-
-
-
     }
 }

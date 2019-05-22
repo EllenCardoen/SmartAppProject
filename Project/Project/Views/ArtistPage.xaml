@@ -8,14 +8,14 @@
 
             <Label />
 
-            <Frame  Padding="0" CornerRadius="30" WidthRequest="350" BorderColor="Gray" HorizontalOptions="Center" >
+            <!--<Frame  Padding="0" CornerRadius="30" WidthRequest="350" BorderColor="Gray" HorizontalOptions="Center" >
 
                 <SearchBar SearchCommand="{Binding SearchCommand}" Text="{Binding SearchBar}" Placeholder="Search" Margin="10,0,0,0" />
-                <!--<SearchBar Text="{Binding SearchBar}" Margin="10,0,0,0" Placeholder="Search" />-->
+                --><!--<SearchBar Text="{Binding SearchBar}" Margin="10,0,0,0" Placeholder="Search" />--><!--
 
             </Frame>
 
-            <Label Text="{Binding ErrorMessage}" HorizontalOptions="Center" />
+            <Label Text="{Binding ErrorMessage}" HorizontalOptions="Center" />-->
 
             <Label Text="TRENDING" FontAttributes="Bold" FontSize="Medium" />
 
@@ -29,9 +29,6 @@
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding images.size996_350}" />
                                 <Label Text="{Binding title.en}" VerticalOptions="Center" />
-                                <!--<Button Text="ADD" Command="{Binding addToPlaylist}" CommandParameter="{Binding id}" HorizontalOptions="EndAndExpand" HeightRequest="30" />-->
-
-                                <Image Source="plusIcon.png" HorizontalOptions="EndAndExpand" HeightRequest="30" Margin="0,20,0,0"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

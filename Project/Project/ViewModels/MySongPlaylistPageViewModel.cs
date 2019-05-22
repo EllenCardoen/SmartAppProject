@@ -39,5 +39,25 @@ namespace Project.ViewModels
             }
         }
 
+        private Track _selectedTrack;
+        public Track SelectedTrack
+        {
+            get
+            {
+                return _selectedTrack;
+            }
+            set
+            {
+                _selectedTrack = value;
+
+                RaisePropertyChanged(() => SelectedTrack);
+                if (SelectedTrack != null)
+                {
+                    Track Track = _selectedTrack;
+                    _navigationService.NavigateTo(Locator.AudioPage, Track);
+                }
+            }
+        }
+
     }
 }

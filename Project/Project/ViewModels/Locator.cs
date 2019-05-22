@@ -12,15 +12,12 @@ namespace Project.ViewModels
         public const string MainPage = "MainPage";
         public const string MasterPage = "MasterPage";
         public const string TabPage = "TabPage";
-        public const string OverviewPage = "OverviewPage";
         public const string TrackPage = "TrackPage";
         public const string AlbumPage = "AlbumPage";
         public const string ArtistPage = "ArtistPage";
         public const string AudioPage = "AudioPage";
         public const string PlaylistPage = "PlaylistPage";
-        public const string PlaylistTrackPage = "PlaylistTrackPage";
         public const string MySongPlaylistPage = "MySongPlaylistPage";
-
 
         public Locator()
         {
@@ -32,12 +29,12 @@ namespace Project.ViewModels
             
 
             SimpleIoc.Default.Register<IProjectAppService, ProjectAppService>();
-
+            SimpleIoc.Default.Register<ImplementationEssentials>();
 
 
             SimpleIoc.Default.Register<MainPageViewModel>();
-            
-            SimpleIoc.Default.Register<OverviewPageViewModel>();
+
+            SimpleIoc.Default.Register<MasterPageViewModel>();
 
             SimpleIoc.Default.Register<TrackPageViewModel>();
 
@@ -48,8 +45,6 @@ namespace Project.ViewModels
             SimpleIoc.Default.Register<AudioPageViewModel>();
 
             SimpleIoc.Default.Register<PlaylistPageViewModel>();
-
-            SimpleIoc.Default.Register<PlaylistTrackPageViewModel>();
 
             SimpleIoc.Default.Register<MySongPlaylistPageViewModel>();
 
@@ -65,11 +60,11 @@ namespace Project.ViewModels
             }
         }
 
-        public OverviewPageViewModel OverviewPageViewModel
+        public MasterPageViewModel MasterPageViewModel
         {
             get
             {
-                return SimpleIoc.Default.GetInstance<OverviewPageViewModel>();
+                return SimpleIoc.Default.GetInstance<MasterPageViewModel>();
             }
         }
 
@@ -110,14 +105,6 @@ namespace Project.ViewModels
             get
             {
                 return SimpleIoc.Default.GetInstance<PlaylistPageViewModel>();
-            }
-        }
-
-        public PlaylistTrackPageViewModel PlaylistTrackPageViewModel
-        {
-            get
-            {
-                return SimpleIoc.Default.GetInstance<PlaylistTrackPageViewModel>();
             }
         }
 

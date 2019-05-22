@@ -27,7 +27,22 @@ namespace Project.ViewModels
             Tracks = await _projectAppService.GetAllTracks();
         }
 
-        //NOG EEN METHODE MAKEN OM LIEDJES TE ZOEKEN IN DE LIJST VAN MYSONGS MET DE SEARCHBAR!!!!!!!
+        public async Task LoadSearchData()
+        {
+            Task<List<Track>> T = _projectAppService.SearchTrack(SearchBar);
+            await T.ContinueWith(t =>
+            {
+                Tracks = T.Result;
+                if (Tracks.Count == 0)
+                {
+                    ErrorMessage = "No results were found.";
+                }
+                else
+                {
+                    ErrorMessage = "";
+                }
+            });
+        }
 
         private string _errorMessage;
         public string ErrorMessage
@@ -67,9 +82,16 @@ namespace Project.ViewModels
             set
             {
                 _tracks = value;
+                foreach(Track track in Tracks)
+                {
+                    DatabaseIdContent AlbumId = new DatabaseIdContent();
+                    AlbumId.id = track.album_id;
+                }
                 RaisePropertyChanged(() => Tracks);
             }
         }
+
+
 
 
         private Track _selectedTrack;
@@ -100,7 +122,7 @@ namespace Project.ViewModels
             {
                 return new RelayCommand(() =>
                 {
-                    //LoadSearchData().GetAwaiter();
+                    LoadSearchData().GetAwaiter();
                 });
             }
         }

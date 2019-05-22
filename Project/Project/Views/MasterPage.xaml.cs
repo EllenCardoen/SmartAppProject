@@ -16,6 +16,9 @@ namespace Project.Views
 		{
 			InitializeComponent ();
 
+            BindingContext = App.Locator.MasterPageViewModel;
+
+
             NavigationPage.SetHasNavigationBar(this, false);
         }
     }

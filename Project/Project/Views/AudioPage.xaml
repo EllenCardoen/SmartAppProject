@@ -11,14 +11,19 @@
             <Label />
             <Image Source="{Binding Image}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="350" HeightRequest="150"/>
             <Label />
+            <Label />
             <StackLayout Orientation="Horizontal">
-                <Button Text="ADD" BackgroundColor="Black" TextColor="White" Command="{Binding addTrack}" />
+                <Button Text="ADD" BackgroundColor="Black" TextColor="LightGray" Command="{Binding addTrack}" HorizontalOptions="StartAndExpand" />
+                <Button Text="DELETE" BackgroundColor="Black" TextColor="LightGray" Command="{Binding deleteTrack}" HorizontalOptions="StartAndExpand" />
                 <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
-                    <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
-                    <Label Text="{Binding ArtistName}" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" HorizontalOptions="Center" />
+                    <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" HorizontalOptions="Center" />
+                    <Label Text="{Binding ArtistName}" TextColor="White" FontSize="Small" HorizontalOptions="Center" />
                 </StackLayout>
-                <Button Text="SHARE" BackgroundColor="Black" TextColor="White" Command="{Binding shareTrack}" HorizontalOptions="EndAndExpand" HeightRequest="30" />
+                <Button Text="SHARE" BackgroundColor="Black" TextColor="LightGray" Command="{Binding shareTrack}" HorizontalOptions="EndAndExpand" HeightRequest="30" />
+
             </StackLayout>
+
+            <Label Text="{Binding ErrorMessageAddRemoveTrack}" TextColor="White" FontSize="Micro" HorizontalOptions="StartAndExpand" Margin="0,0,0,100" VerticalOptions="Center" />
 
 
             <WebView Source="{Binding Audio}"  HorizontalOptions="Fill" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" />

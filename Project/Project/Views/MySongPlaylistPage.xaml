@@ -9,13 +9,6 @@
 
             <Label />
 
-            <Frame  Padding="0" CornerRadius="30" WidthRequest="350" BorderColor="Gray" HorizontalOptions="Center" >
-                <SearchBar SearchCommand="{Binding SearchCommand}" Text="{Binding SearchBar}" Placeholder="Search" Margin="10,0,0,0" />
-                <!--<SearchBar Text="{Binding SearchBar}" Margin="10,0,0,0" Placeholder="Search" />-->
-            </Frame>
-            
-            <Label Text="{Binding ErrorMessage}" HorizontalOptions="Center" />
-
             <Label Text="PLAYLIST" FontAttributes="Bold" FontSize="Medium" />
 
             <Label />
